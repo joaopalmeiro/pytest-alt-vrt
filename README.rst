@@ -32,9 +32,9 @@ Requirements
 Installation
 ------------
 
-You can install "pytest-local-vrt" via `pip`_ from `PyPI`_::
+You can install ``pytest-local-vrt`` via `pip`_ from `PyPI`_:
 
-    $ pip install pytest-local-vrt
+- ``pip install pytest-local-vrt``
 
 
 Usage
@@ -42,15 +42,11 @@ Usage
 
 * TODO
 
-Contributing
-------------
-Contributions are very welcome. Tests can be run with `tox`_, please ensure
-the coverage at least stays the same before you submit a pull request.
 
 License
 -------
 
-Distributed under the terms of the `MIT`_ license, "pytest-local-vrt" is free and open source software
+Distributed under the terms of the `MIT`_ license, ``pytest-local-vrt`` is free and open source software.
 
 
 Issues
@@ -58,11 +54,14 @@ Issues
 
 If you encounter any problems, please `file an issue`_ along with a detailed description.
 
+
 Notes
 -----
 
-- pytest --driver Chrome
-- pytest --driver Chrome --local-vrt-save-baseline
+- `Selenium WebDriver API`_ documentation.
+- ``pytest --driver Chrome``
+- ``pytest --driver Chrome --local-vrt-save-baseline``
+
 
 .. _`Cookiecutter`: https://github.com/audreyr/cookiecutter
 .. _`@hackebrot`: https://github.com/hackebrot
@@ -70,7 +69,6 @@ Notes
 .. _`cookiecutter-pytest-plugin`: https://github.com/pytest-dev/cookiecutter-pytest-plugin
 .. _`file an issue`: https://github.com/joaopalmeiro/pytest-local-vrt/issues
 .. _`pytest`: https://github.com/pytest-dev/pytest
-.. _`tox`: https://tox.readthedocs.io/en/latest/
+.. _`Selenium WebDriver API`: https://selenium-python.readthedocs.io/api.html
 .. _`pip`: https://pypi.org/project/pip/
 .. _`PyPI`: https://pypi.org/project
-.. _`Selenium WebDriver API`: https://selenium-python.readthedocs.io/api.html
