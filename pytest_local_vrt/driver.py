@@ -4,7 +4,7 @@ from pathlib import Path
 
 from PIL import Image
 
-from .pil_engine import ImageDiffEngine
+from .image_diff import ImageDiffEngine
 
 DEFAULT_BASELINE_DIR = Path.cwd() / "screenshots" / "baseline"
 DEFAULT_OUTPUT_DIR = Path.cwd() / "screenshots"
