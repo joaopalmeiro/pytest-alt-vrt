@@ -11,7 +11,7 @@ DEFAULT_OUTPUT_DIR = Path.cwd() / "screenshots"
 DEFAULT_VIEWPORT_SIZE = "1024x768"
 
 
-class LocalVRTDriver:
+class AltVRTDriver:
     def __init__(self, driver, **options):
 
         self.driver = driver

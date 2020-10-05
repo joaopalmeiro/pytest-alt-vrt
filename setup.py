@@ -13,14 +13,14 @@ def read(fname):
 
 
 setup(
-    name="pytest-local-vrt",
+    name="pytest-alt-vrt",
     version="0.1.0",
     author="João Palmeiro",
     author_email="jm.palmeiro@campus.fct.unl.pt",
     maintainer="João Palmeiro",
     maintainer_email="jm.palmeiro@campus.fct.unl.pt",
     license="MIT",
-    url="https://github.com/joaopalmeiro/pytest-local-vrt",
+    url="https://github.com/joaopalmeiro/pytest-alt-vrt",
     description="A simple plugin to use with pytest",
     long_description=read("README.rst"),
     packages=find_packages(),
@@ -41,5 +41,5 @@ setup(
         "Operating System :: OS Independent",
         "License :: OSI Approved :: MIT License",
     ],
-    entry_points={"pytest11": ["local_vrt = pytest_local_vrt.plugin"]},
+    entry_points={"pytest11": ["alt_vrt = pytest_alt_vrt.plugin"]},
 )

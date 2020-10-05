@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0e235233f6a4630dbbd6738d9806546f7761f1968d30f63902d8c723acf7810a"
+            "sha256": "fc7bcb24c55e4c3e9b59f85de94d9c592419b4a4ebf4e5b72e82ad3fb060928a"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -135,6 +135,10 @@
             "markers": "python_version >= '3.5'",
             "version": "==6.1.1"
         },
+        "pytest-alt-vrt": {
+            "editable": true,
+            "path": "."
+        },
         "pytest-base-url": {
             "hashes": [
                 "sha256:7f1f32e08c2ee751e59e7f5880235b46e83496adc5cba5a01ca218c6fe81333d",
@@ -149,10 +153,6 @@
             ],
             "markers": "python_version >= '3.6'",
             "version": "==2.1.1"
-        },
-        "pytest-local-vrt": {
-            "editable": true,
-            "path": "."
         },
         "pytest-metadata": {
             "hashes": [

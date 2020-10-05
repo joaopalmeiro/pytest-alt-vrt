@@ -1,13 +1,13 @@
 ================
-pytest-local-vrt
+pytest-alt-vrt
 ================
 
-.. image:: https://img.shields.io/pypi/v/pytest-local-vrt.svg
-    :target: https://pypi.org/project/pytest-local-vrt
+.. image:: https://img.shields.io/pypi/v/pytest-alt-vrt.svg
+    :target: https://pypi.org/project/pytest-alt-vrt
     :alt: PyPI version
 
-.. image:: https://img.shields.io/pypi/pyversions/pytest-local-vrt.svg
-    :target: https://pypi.org/project/pytest-local-vrt
+.. image:: https://img.shields.io/pypi/pyversions/pytest-alt-vrt.svg
+    :target: https://pypi.org/project/pytest-alt-vrt
     :alt: Python versions
 
 A simple plugin to use with pytest
@@ -32,9 +32,9 @@ Requirements
 Installation
 ------------
 
-You can install ``pytest-local-vrt`` via `pip`_ from `PyPI`_:
+You can install ``pytest-alt-vrt`` via `pip`_ from `PyPI`_:
 
-- ``pip install pytest-local-vrt``
+- ``pip install pytest-alt-vrt``
 
 
 Usage
@@ -46,7 +46,7 @@ Usage
 License
 -------
 
-Distributed under the terms of the `MIT`_ license, ``pytest-local-vrt`` is free and open source software.
+Distributed under the terms of the `MIT`_ license, ``pytest-alt-vrt`` is free and open source software.
 
 
 Issues
@@ -60,14 +60,14 @@ Notes
 
 - `Selenium WebDriver API`_ documentation.
 - ``pytest --driver Chrome``
-- ``pytest --driver Chrome --local-vrt-save-baseline``
+- ``pytest --driver Chrome --alt-vrt-save-baseline``
 
 
 .. _`Cookiecutter`: https://github.com/audreyr/cookiecutter
 .. _`@hackebrot`: https://github.com/hackebrot
 .. _`MIT`: http://opensource.org/licenses/MIT
 .. _`cookiecutter-pytest-plugin`: https://github.com/pytest-dev/cookiecutter-pytest-plugin
-.. _`file an issue`: https://github.com/joaopalmeiro/pytest-local-vrt/issues
+.. _`file an issue`: https://github.com/joaopalmeiro/pytest-alt-vrt/issues
 .. _`pytest`: https://github.com/pytest-dev/pytest
 .. _`Selenium WebDriver API`: https://selenium-python.readthedocs.io/api.html
 .. _`pip`: https://pypi.org/project/pip/
