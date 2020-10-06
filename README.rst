@@ -61,6 +61,8 @@ Notes
 - `Selenium WebDriver API`_ documentation.
 - ``pytest --driver Chrome``
 - ``pytest --driver Chrome --alt-vrt-save-baseline``
+- Print: ``pytest --driver Chrome -s``
+- ``pipenv install --python 3.6``
 
 
 .. _`Cookiecutter`: https://github.com/audreyr/cookiecutter

@@ -25,7 +25,7 @@ setup(
     long_description=read("README.rst"),
     packages=find_packages(),
     python_requires=">=3.6, <=3.8",
-    install_requires=["pytest-selenium", "Pillow"],
+    install_requires=["pytest-selenium", "Pillow", "scikit-image", "altair"],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Framework :: Pytest",

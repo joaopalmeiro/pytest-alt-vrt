@@ -39,6 +39,22 @@ class AltVRTDriver:
     def _create_dir(directory):
         Path(directory).mkdir(parents=True, exist_ok=True)
 
+    def generate_html(self, file_path, chart):
+        self._create_dir(self.baseline_dir)
+
+        baseline_html = self.baseline_dir / f"{file_path}.html"
+
+        if self.save_baseline:
+            chart.save(str(baseline_html), format="html")
+            return baseline_html.as_uri()
+
+        self._create_dir(self.output_dir)
+
+        fresh_html = self.output_dir / f"{file_path}.html"
+        chart.save(str(fresh_html), format="html")
+
+        return fresh_html.as_uri()
+
     def assert_screenshot(self, file_path, threshold=0):
         self._create_dir(self.baseline_dir)
 
@@ -56,7 +72,7 @@ class AltVRTDriver:
         fresh_image.save(fresh_image_file)
 
         engine = ImageDiffEngine(baseline_image, fresh_image_file, threshold)
-        engine.assertSameFiles()
+        engine.assert_same_images()
 
     @property
     def baseline_dir(self):

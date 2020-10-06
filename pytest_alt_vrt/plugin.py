@@ -27,7 +27,7 @@ def pytest_addoption(parser):
     )
 
 
-@pytest.fixture()
+@pytest.fixture
 def alt_vrt(request, selenium):
     options = {
         "save_baseline": request.config.getoption("alt_vrt_save_baseline"),

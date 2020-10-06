@@ -1,7 +1,10 @@
-from itertools import chain
+import math
 
 import pytest
 from PIL import Image
+from skimage.metrics import mean_squared_error
+
+from .utils import pil2np
 
 
 class ImageDiffEngine:
@@ -10,28 +13,29 @@ class ImageDiffEngine:
         self.output_file = output_file
         self.threshold = threshold
 
-    def assertSameFiles(self):
-        baseline_image = Image.open(self.baseline_file).convert("RGB")
-        output_image = Image.open(self.output_file).convert("RGB")
+        self.baseline_image = Image.open(baseline_file).convert("RGB")
+        self.output_image = Image.open(output_file).convert("RGB")
 
-        distance = self.get_distance(baseline_image, output_image)
+    def assert_same_images(self):
+        diff = self.root_mean_squared_error()
 
-        if distance > self.threshold:
-            pytest.fail("New screenshot did not match the baseline")
+        if diff > self.threshold:
+            pytest.fail(f"New screenshot did not match the baseline ({diff})")
 
-    @staticmethod
-    def get_distance(baseline_image, output_image):
-        baseline_values = chain(*baseline_image.getdata())
-        output_values = chain(*output_image.getdata())
+    # Version that uses Pillow and Python:
+    # def root_mean_squared_error(self):
+    #     diff = ImageChops.difference(self.baseline_image, self.output_image)
 
-        band_len = len(output_image.getbands())
+    #     squared_values = [d ** 2 for d in flatten(diff.getdata())]
+    #     mse = mean(squared_values)
+    #     rmse = math.sqrt(mse)
 
-        distance = 0
+    #     return rmse
 
-        for output_value, baseline_value in zip(output_values, baseline_values):
-            distance += (
-                abs(float(output_value) / band_len - float(baseline_value) / band_len)
-                / 255
-            )
+    # Version that uses NumPy, scikit-image, and Python:
+    def root_mean_squared_error(self):
+        rmse = math.sqrt(
+            mean_squared_error(pil2np(self.baseline_image), pil2np(self.output_image))
+        )
 
-        return distance
+        return rmse
