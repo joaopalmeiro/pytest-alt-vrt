@@ -21,7 +21,7 @@ setup(
     maintainer_email="jm.palmeiro@campus.fct.unl.pt",
     license="MIT",
     url="https://github.com/joaopalmeiro/pytest-alt-vrt",
-    description="A simple plugin to use with pytest",
+    description="A simple plugin for Visual Regression Testing of Altair charts to use with pytest.",
     long_description=read("README.rst"),
     packages=find_packages(),
     python_requires=">=3.6, <=3.8",
